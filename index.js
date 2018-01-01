@@ -13,7 +13,7 @@ client.on('message', (message, roles) => {
   if (message.content === prefix + 'ping') {
     message.channel.send('Pong!')
 }
-  if(command === prefix + 'eval') {
+  if(message.content === prefix + 'eval') {
     if(message.author.id !== "133867153890869248") return;
     const args3 = message.content.split(' ').slice(1);
     function clean(text) {
