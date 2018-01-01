@@ -2,17 +2,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-  console.log('Bot ready to work!');
+  console.log('I am ready!');
 });
 
-const prefix = '>'
 client.on('message', message => {
-  if (message.author.bot) return;
+  if (message.content === 'ping') {
+    message.reply('pong');
+  }
+});
 
-  if (!message.content.startsWith(prefix)) return;
-
-  if (message.content.startsWith === prefix + 'ping') {
-  message.channel.send('Pong!');
-  }});
-          
-  client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
