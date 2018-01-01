@@ -8,9 +8,9 @@ client.on('ready', () => {
 const prefix = '>'
 client.on('message', (message, roles) => {
   if (message.author.bot) return;
-  if (!command.startsWith(prefix)) return;
+  if (!message.content.startsWith(prefix)) return;
 
-  if (command === prefix + 'ping') {
+  if (message.content === prefix + 'ping') {
     message.channel.send('Pong!')
 }
 });
