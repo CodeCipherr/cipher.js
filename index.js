@@ -13,7 +13,7 @@ client.on('message', (message, roles) => {
 
   if (message.content === prefix + 'ping') {
     message.channel.send('Pong!')
-}
+}};
 
     
 client.login(process.env.BOT_TOKEN);
