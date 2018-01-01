@@ -7,7 +7,7 @@ client.on('ready', () => {
 });
 
 const prefix = '>'
-client.on('message', (message, roles) => {
+client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
 
